@@ -8,6 +8,6 @@ public class HelloWorldAction extends ActionSupport{
 	//重写execute()方法
 	public String execute() throws Exception {
 		System.out.println("欢迎使用struts2!");
-		return null;
+		return "success";
 	}
 }
