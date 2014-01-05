@@ -8,13 +8,21 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<%
+<%-- 	<%
 	String method=request.getAttribute("method").toString();
 	String clientIP=request.getAttribute("clientIP").toString();
 	%>
 	客户端IP是:<%=clientIP %><br/>
+	客户端的访问方式为：<%=method %><br><hr> --%>
+	
+	<%
+	String method=application.getAttribute("method").toString();
+	String clientIP=application.getAttribute("clientIP").toString();
+	%>
+	客户端IP是:<%=clientIP %><br/>
 	客户端的访问方式为：<%=method %><br><hr>
-	客户端访问的IP为：${requestScope.clientIP }<br>
-    客户端的访问方式为：${requestScope.method}<br>
+	[客户端访问的IP为]：${applicationScope.clientIP }<br>
+    [客户端的访问方式为]：${applicationScope.method}<br>
+    
 </body>
 </html>
