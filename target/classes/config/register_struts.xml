@@ -4,7 +4,9 @@
 	"http://struts.apache.org/dtds/struts-2.3.dtd">
 
 <struts>
-	<!-- 加载其他配置文件 -->
-	<include file="config/ip_struts.xml"></include>
-	<include file="config/register_struts.xml"></include>
+	<package name="register" namespace="/" extends="struts-default">
+		<action name="RegisterAction" class="com.amos.web.action.RegisterAction"
+			method="register">
+		</action>
+	</package>
 </struts>
