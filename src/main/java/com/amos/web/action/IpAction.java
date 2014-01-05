@@ -1,10 +1,13 @@
 package com.amos.web.action;
 
+import java.util.Map;
+
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.struts2.ServletActionContext;
 
+import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
 /**
@@ -22,7 +25,11 @@ public class IpAction extends ActionSupport {
 		HttpServletRequest request = ServletActionContext.getRequest();
 		// HttpServletResponse response = ServletActionContext.getResponse();
 		// 获取servletcontext域
-		ServletContext servletContext = ServletActionContext.getServletContext();
+		// ServletContext servletContext =
+		// ServletActionContext.getServletContext();
+
+		// 获取HttpSession域　
+		Map<String, Object> session = ActionContext.getContext().getSession();
 
 		// 获取客户端ip地址
 		String clientIP = request.getRemoteAddr();
@@ -31,14 +38,19 @@ public class IpAction extends ActionSupport {
 		// response.setContentType("text/html;charset=utf-8");
 		// response.getWriter().write("客户端访问的IP为：" + clientIP + "<br>");
 		// response.getWriter().write("客户端的访问方式为：" + method);
-		
+
 		// 将信息绑定到request中
 		// request.setAttribute("clientIP", clientIP);
 		// request.setAttribute("method", method);
 
 		// 将信息绑定到servletContext中
-		servletContext.setAttribute("clientIP", clientIP);
-		servletContext.setAttribute("method", method);
+		// servletContext.setAttribute("clientIP", clientIP);
+		// servletContext.setAttribute("method", method);
+
+		// 将信息绑定到servletSession中
+		session.put("clientIP", clientIP);
+		session.put("method", method);
+
 		return "toJSP";
 
 	}

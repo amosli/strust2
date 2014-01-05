@@ -15,14 +15,24 @@
 	客户端IP是:<%=clientIP %><br/>
 	客户端的访问方式为：<%=method %><br><hr> --%>
 	
-	<%
+<%-- 	<%
 	String method=application.getAttribute("method").toString();
 	String clientIP=application.getAttribute("clientIP").toString();
 	%>
 	客户端IP是:<%=clientIP %><br/>
 	客户端的访问方式为：<%=method %><br><hr>
 	[客户端访问的IP为]：${applicationScope.clientIP }<br>
-    [客户端的访问方式为]：${applicationScope.method}<br>
+    [客户端的访问方式为]：${applicationScope.method}<br> --%>
+    
+    
+    	<%
+	String method=session.getAttribute("method").toString();
+	String clientIP=session.getAttribute("clientIP").toString();
+	%>
+	客户端IP是:<%=clientIP %><br/>
+	客户端的访问方式为：<%=method %><br><hr>
+	[[客户端访问的IP为]]：${sessionScope.clientIP }<br>
+    [[客户端的访问方式为]]：${sessionScope.method}<br>
     
 </body>
 </html>
