@@ -14,4 +14,5 @@ public class HelloWorldAction extends ActionSupport{
 		System.out.println("欢迎使用struts2!");
 		return "success";
 	}
+	
 }

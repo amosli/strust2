@@ -8,5 +8,8 @@
 </head>
 <body>
 	成功！！
+	<br>
+	客户端访问的IP为：${requestScope.clientIP}
+    客户端的访问方式为：${requestScope.method}
 </body>
 </html>

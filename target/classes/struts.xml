@@ -4,17 +4,6 @@
 	"http://struts.apache.org/dtds/struts-2.3.dtd">
 
 <struts>
-	<constant name="struts.action.extension" value="hello,abc"></constant>
-	<package name="com.amos.web.action" namespace="/" extends="struts-default">
-		<action name="HelloWorldAction" class="com.amos.web.action.HelloWorldAction" method="execute">
-			<result name="success" type="dispatcher">
-				suc.jsp
-			</result>
-		</action>
-	</package>
 	<!-- 加载其他配置文件 -->
-	<!-- <include file="config/dao_struts.xml"></include>
-	<include file="kconfig/email_struts.xml"></include> -->
-	
-	
+	<include file="config/ip_struts.xml"></include>
 </struts>
