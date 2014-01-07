@@ -5,6 +5,7 @@
 
 <struts>
 	<!-- 加载其他配置文件 -->
-	<include file="config/ip_struts.xml"></include>
-	<include file="config/register_struts.xml"></include>
+	<!-- <include file="config/ip_struts.xml"></include>
+	<include file="config/register_struts.xml"></include> -->
+	<include file="config/user_struts.xml"></include>
 </struts>
