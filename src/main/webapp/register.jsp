@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form name="register" action="/struts2/RegisterAction" method="POST">
+	<form name="register" action="/struts2/RegisterAction" method="post">
 		<table border="2" align="center">
 			<caption>新用户注册</caption>
 			<tr>
