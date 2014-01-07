@@ -33,6 +33,14 @@ public class RegisterAction extends ActionSupport {
 		this.username = username;
 	}
 
+	public String getUsername() {
+		return username;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
 	public void setPassword(String password) {
 		System.out.println("调用　password方法　");
 		this.password = password;
@@ -40,6 +48,6 @@ public class RegisterAction extends ActionSupport {
 
 	public String register() throws Exception {
 		System.out.println("用户名：" + username + "  密码：" + password);
-		return null;
+		return "toshow";
 	}
 }

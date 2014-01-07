@@ -7,6 +7,7 @@
 	<package name="register" namespace="/" extends="struts-default">
 		<action name="RegisterAction" class="com.amos.web.action.RegisterAction"
 			method="register">
+			<result name="toshow" type="dispatcher">/show.jsp</result>
 		</action>
 	</package>
 </struts>
