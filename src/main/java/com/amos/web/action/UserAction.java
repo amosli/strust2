@@ -19,7 +19,11 @@ public class UserAction extends ActionSupport {
 	}
 
 	public void setUsername(String username) {
-		this.username = username;
+		System.out.println("执行setUserName()方法!");
+		if (username != null & username.trim().length() > 0) {
+			this.username = username;
+		}
+
 	}
 
 	public String getPassword() {
@@ -30,9 +34,25 @@ public class UserAction extends ActionSupport {
 		this.password = password;
 	}
 
+	// 检验方法
+	public void validate() {
+		System.out.println("执行validate()方法!");
+		if (username != null && username.trim().length() > 0) {
+			
+		}else{
+			this.addFieldError("username", "用户名为必填！");
+		}
+		
+		if (password != null && password.trim().length() > 0) {
+			
+		}else{
+			this.addFieldError("password", "密码为必填！");
+		}
+	}
+
 	// 用户注册
 	public String register() throws Exception {
-
+		System.out.println("执行注册方法！");
 		return "toRegisterJsp";
 	}
 

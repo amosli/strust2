@@ -10,6 +10,9 @@
 			<result name="toRegisterJsp" type="dispatcher">
 			/register_success.jsp
 			</result>
+			<result name="input" type="dispatcher">
+			/user_register.jsp
+			</result>
 		</action>
 		<action name="UserLogin" class="com.amos.web.action.UserAction"
 			method="login">
