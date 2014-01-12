@@ -35,19 +35,28 @@ public class UserAction extends ActionSupport {
 	}
 
 	// 检验方法
-	public void validate() {
+//	 public void validate() {
+//	 System.out.println("执行validate()方法!");
+//	 if (username != null && username.trim().length() > 0) {
+//	
+//	 }else{
+//	 this.addFieldError("username", "用户名为必填！");
+//	 }
+//	
+//	 if (password != null && password.trim().length() > 0) {
+//	
+//	 }else{
+//	 this.addFieldError("password", "密码为必填！");
+//	 }
+//	 }
+
+	public void validateLogin() {
 		System.out.println("执行validate()方法!");
-		if (username != null && username.trim().length() > 0) {
-			
-		}else{
-			this.addFieldError("username", "用户名为必填！");
-		}
+		 if (username != null && username.trim().length() > 0) {
 		
-		if (password != null && password.trim().length() > 0) {
-			
-		}else{
-			this.addFieldError("password", "密码为必填！");
-		}
+		 }else{
+		 this.addFieldError("username", "用户名为必填！");
+		 }
 	}
 
 	// 用户注册
@@ -58,6 +67,7 @@ public class UserAction extends ActionSupport {
 
 	// 用户登录
 	public String login() throws Exception {
+		System.out.println("执行登录方法！");
 		return "toLoginJsp";
 	}
 

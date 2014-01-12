@@ -11,13 +11,16 @@
 			/register_success.jsp
 			</result>
 			<result name="input" type="dispatcher">
-			/user_register.jsp
+			/user_register2.jsp
 			</result>
 		</action>
 		<action name="UserLogin" class="com.amos.web.action.UserAction"
 			method="login">
 			<result name="toLoginJsp" type="dispatcher">
 			/login_success.jsp			
+			</result>
+			<result name="input" type="dispatcher">
+			/user_login.jsp
 			</result>
 		</action>
 	</package>

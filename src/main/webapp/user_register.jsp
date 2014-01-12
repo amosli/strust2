@@ -14,7 +14,6 @@
 		<s:textfield  label="用户名" name="username"/>
 		<s:password label="密码" name="password"/>
 		<s:submit label="提交"/>
-	
 	</s:form>
 </body>
 </html>
